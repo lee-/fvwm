@@ -10,8 +10,6 @@
 # it may quietly fail.
 
 
-IgnoreModifiers 2
-
 # Read fvwm-autohide.fvwm
 # Read fvwm-icon-box.fvwm
 Read fvwm-colours.fvwm

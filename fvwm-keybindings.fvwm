@@ -8,6 +8,11 @@
 # W is window context, A is all contexts, R is root window; there may
 # be some other contexts, too
 
+#
+# ignore NumLock
+#
+IgnoreModifiers 2
+
 
 ##
 # some simple default key bindings:
