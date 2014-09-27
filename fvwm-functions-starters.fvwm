@@ -1,0 +1,78 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+# functions to start programs from fvwm (menues)
+
+
+DestroyFunc StartClient
+AddToFunc StartClient
++ I Exec exec ~/bin/sclient.sh
+
+
+DestroyFunc StartVlc
+AddToFunc StartVlc
++ I Exec exec vlc
+
+
+DestroyFunc StartDarktable
+AddToFunc StartDarktable
++ I Exec exec darktable
+
+
+DestroyFunc StartNemo
+AddToFunc StartNemo
++ I Exec exec nemo --no-desktop
+
+
+DestroyFunc StartGnome-control-center
+AddToFunc StartGnome-control-center
++ I Exec exec gnome-control-center
+
+
+DestroyFunc StartSeamonkeyLocal
+AddToFunc StartSeamonkeyLocal
++ I Exec exec nice -n 19 seamonkey
+
+DestroyFunc StartSeamonkeyRemote
+AddToFunc StartSeamonkeyRemote
++ I Exec exec ~/bin/seamonkey-remote.sh
+
+
+DestroyFunc StartGimpRemote
+AddToFunc StartGimpRemote
++ I Exec exec ~/bin/gimp-remote.sh
+
+
+DestroyFunc StartFirefox
+AddToFunc StartFirefox
++ I Exec exec nice -n 19 firefox
+
+
+DestroyFunc StartScribus
+AddToFunc StartScribus
++ I Exec exec scribus
+
+
+DestroyFunc StartLyx
+AddToFunc StartLyx
++ I Exec exec lyx
+
+
+DestroyFunc StartEmacs
+AddToFunc StartEmacs
++ I Exec exec emacs
+
+
+DestroyFunc StartEmacsclient
+AddToFunc StartEmacsclient
++ I Exec exec emacsclient -nc
+
+
+DestroyFunc StartXterm
+AddToFunc StartXterm
++ I Exec exec xterm
+
+
+DestroyFunc StartGapcmon
+AddToFunc StartGapcmon
++ I Exec exec gapcmon

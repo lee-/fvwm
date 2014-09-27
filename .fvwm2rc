@@ -1,0 +1,31 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+# main configuration for fvwm
+#
+# the order in which these are read doesn't seem to matter, so I used
+# 'sort-lines
+#
+# 'fvwm-nonpublic.fvwm' is not in the git repo and optional.  Reading
+# it may quietly fail.
+
+
+IgnoreModifiers 2
+
+# Read fvwm-autohide.fvwm
+# Read fvwm-icon-box.fvwm
+Read fvwm-colours.fvwm
+Read fvwm-desks.fvwm
+Read fvwm-functions-init.fvwm
+Read fvwm-functions-screenshots.fvwm
+Read fvwm-functions-starters.fvwm
+Read fvwm-functions.fvwm
+Read fvwm-icon-man.fvwm
+Read fvwm-keybindings.fvwm
+Read fvwm-menudefs-internal.fvwm
+Read fvwm-menudefs.fvwm
+Read fvwm-menustyle.fvwm
+Read fvwm-mousebindings.fvwm
+Read fvwm-nonpublic.fvwm quiet
+Read fvwm-pager.fvwm
+Read fvwm-styles.fvwm

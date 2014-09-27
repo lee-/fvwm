@@ -1,0 +1,34 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+# Warning: Since most (or all) windows don't have a title bar, I'm
+# using AltGr+Mouse-1 to move windows.  If your keyboard doesn't have
+# an AltGr key, you want to use a different key for this!
+
+
+# some simple default mouse bindings:
+#   for the root window:
+Mouse 1 R       N       Menu MenuFvwmRoot Nop
+Mouse 2 R       N       Menu MenuFvwmWindowOps Nop
+Mouse 3 R       N       WindowList
+Mouse 1 R       C       Module FvwmPager -transient
+
+
+#   for the title bar buttons:
+# SEE WARNING above
+#
+Mouse 0 1       A       Menu MenuFvwmWindowOps2 Close
+Mouse 0 2       A       Maximize
+Mouse 0 3       A       Module FvwmIdent
+Mouse 0 4       A       FuncFvwmMaximize
+Mouse 0 6       A       Iconify
+
+
+#   for other parts of the window/borders/icons:
+Mouse 1 FS      A       FuncFvwmResizeOrRaise
+Mouse 1 T       A       FuncFvwmMoveOrRaise
+Mouse 1 I       A       FuncFvwmMoveOrIconify
+Mouse 1 W       5       FuncFvwmMoveOrRaise
+Mouse 2 I       A       Iconify
+Mouse 2 FST     A       Menu MenuFvwmWindowOps2 Nop
+Mouse 3 TSIF    A       RaiseLower

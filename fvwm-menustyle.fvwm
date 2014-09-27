@@ -1,0 +1,17 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+
+# Menu styles
+
+# Fonts: 'Source Sans Pro' is not in Debian :(  You can get it from
+# rpm packages or perhaps download it somewhere.  When you are at it,
+# also get 'Source Code Pro'.
+
+
+MenuStyle * fvwm, Foreground green, Background $[csbasecolor], Greyed darkgreen
+#MenuStyle * Font "xft:Inconsolata:pixelsize=14:Medium", Hilight3DThickness 5
+MenuStyle * Font "xft:Source Sans Pro:pixelsize=14:style=Regular", Hilight3DThickness 5
+MenuStyle * SubmenusLeft
+MenuStyle * BorderWidth 5, HilightBack DarkSlateGray, Hilight3DThick
+MenuStyle * PopupOffset -1 100, TrianglesSolid, TrianglesUseFore

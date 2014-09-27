@@ -1,0 +1,20 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+# definition of virtual desktops for fvwm
+#
+# Note: You may not be used to be able to move the mouse pointer over
+# the edge of the screen to get to another desk.  I'm using a
+# trackball (I hate mice), and anything else, like having to click
+# buttons to change the desk, really annoys me ...
+#
+# Changing desks is also bound to AltGr+<cursor key>.  Your keyboard
+# might not have an AltGr key.
+
+
+EdgeResistance 350
+EdgeScroll 100 100
+ClickTime 750
+OpaqueMoveSize unlimited
+
+DeskTopSize 6x6

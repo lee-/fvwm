@@ -1,0 +1,61 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+
+# modifier 5 is AltGr --- you probably want to change that when your
+# keyboard doesn't have an AltGr key
+#
+# W is window context, A is all contexts, R is root window; there may
+# be some other contexts, too
+
+
+##
+# some simple default key bindings:
+##
+#
+# Modifiers for key bindings:
+#
+# ,---- [ xmodmap -pm ]
+# | xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
+# | 
+# | shift       Shift_L (0x32),  Shift_R (0x3e)
+# | lock      
+# | control     Control_L (0x25),  Control_L (0x42),  Control_R (0x69)
+# | mod1        Alt_L (0x40),  Meta_L (0xcd)
+# | mod2        Num_Lock (0x4d)
+# | mod3      
+# | mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
+# | mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
+# `----
+#
+#Key Next         A       SCM     Next [*] Focus
+#Key Prior        A       SCM     Prev [*] Focus
+# Screenshot
+Key Print               A       A       Screenshot
+Key Scroll_Lock         A       5       WindowList
+# Key Pause               A       A       Exec exec espeak -p 15 -v de -m "<speak xml version="1.0"><prosody rate="slow">Es ist <emphasis>$(date +%H)</emphasis> Uhr <emphasis>$(date +%M)</emphasis>.</prosody></speak>"
+Key F12                 W       5       Maximize
+Key Tab                 A       M       -
+Key Tab                 W       1       RaiseLower
+Key Tab                 A       5       WindowList
+
+Key F1                  A       5       Menu MenuFvwmRoot
+Key F10                 W       5       Menu MenuScreenshot
+Key F11                 W       5       Iconify
+Key F2			R	5	Function StartClient
+# Key F3			R	5	Function StartEmacs
+# Key F4			R	5	Function StartVlc
+# Key F5			R	5	Function StartEmacsclient
+# Key F6			R	5	Function StartSeamonkey
+# Key F7			R	5	Function StartXterm
+
+Key End                 W       5       Menu MenuArrangeWindows
+Key Home                W       5       Resize
+
+
+# this is the desktop switching:
+#
+Key Right               A       5       GotoPage 1p 0p
+Key Left                A       5       GotoPage -1p 0p
+Key Down                A       5       GotoPage 0p 1p
+Key Up                  A       5       GotoPage 0p -1p

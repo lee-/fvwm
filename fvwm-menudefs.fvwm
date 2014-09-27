@@ -1,0 +1,100 @@
+
+# menu definitions for fvwm
+#
+# The user may want to change these, mainly to put the software they
+# are frequently using into the menus.
+#
+# I have come to make a starter function for every software instead of
+# starting the software directly from here.  They are in
+# 'fvwm-functions-starters.fvwm'.
+#
+# Using starter functions makes it easier to do the same action
+# through various means, i. e. you might have both a key binding and a
+# menu entry to start your web browser.  When you use a starter
+# function in both places, you only need to change the starter
+# function rather than going through all places where the browser is
+# started in case you want to use a different web browser.
+#
+# There are some entries that don't use starter functions because they
+# haven't been converted yet.  If you change one, make a starter
+# function for it.
+
+
+DestroyMenu MenuFvwmRoot
+AddToMenu MenuFvwmRoot
++ "Menu"                                        Title
++ "Arrange Windows"                             Popup MenuArrangeWindows
++ ""		                                Nop
++ "xterm"                                       StartXterm
++ "urxvt"                                       Exec exec urxvt
++ "Emacs Frame"                                 StartEmacsclient
++ ""		                                Nop
++ "Calculators"	                                Popup calculators-menu
++ "Graphics"	                                Popup graphics-menu
++ "Misc"		                        Popup misc-menu
++ "Apps"		                        Popup apps-menu
++ ""                                            Nop
++ "Fvwm Menu"                                   Popup my-fvwm-menu
+
+
+DestroyMenu apps-menu
+AddToMenu apps-menu
++ "Apps Menu"                   Title
++ emacs         		StartEmacs
++ ""                            Nop
++ "Remote Seamonkey"            StartSeamonkeyRemote
++ "Local Seamonkey"             StartSeamonkeyLocal
++ Firefox			StartFirefox
++ ""                            Nop
++ Scribus                       StartScribus
++ Lyx                           StartLyx
+
+
+DestroyMenu calculators-menu
+AddToMenu calculators-menu
++ "Calculators Menu"            Title
++ xcalc                         Exec exec xcalc
+
+
+DestroyMenu graphics-menu
+AddToMenu graphics-menu
++ "Graphics Menu"               Title
++ gimp-remote                   StartGimpRemote
++ gimp                          Exec exec gimp
++ darktable			StartDarktable
++ ""                            Nop
++ dvbcut                        Exec exec dvbcut
++ vlc                           StartVlc
++ ""                            Nop
++ xfig                          Exec exec xfig
++ dia                           Exec exec dia
++ ""		                Nop
++ "Screenshot"                  Popup MenuScreenshot
++ ""		                Nop
++ xcolorsel                     Exec exec xcolorsel
++ xfontsel                      Exec exec xfontsel
++ fontmatrix                    Exec exec fontmatrix
++ xmag               	        Exec exec xmag
++ ""                            Nop
++ nvidia-settings               Exec exec nvidia-settings
+
+
+DestroyMenu misc-menu
+AddToMenu misc-menu
++ "Misc Menu"                   Title
+#+ "rox"                         Exec exec rox
+#+ xfe                           Exec exec xfe
++ "nemo"                        StartNemo
++ "Thunar"                      Exec exec thunar
+#+ 4Pane                         Exec exec 4Pane
++ "qpdfview"                    Exec exec qpdfview
++ "xpdf"                        Exec exec xpdf
++ ""		                Nop
++ "Mumble"                      Exec exec mumble
++ "Filezilla"                   Exec exec filezilla
++ ""		                Nop
++ "xosview"                     Exec exec xosview -geometry 240x965-0-235
++ "xbiff"                       Exec exec "xbiff -fg darkgreen -bg black -update 120"
++ ""				Nop
++ "gnome-control-center"	StartGnome-control-center
++ "UPS Info"                    StartGapcmon

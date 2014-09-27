@@ -1,0 +1,82 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+
+# Fonts: 'Source Sans Pro' is not in Debian :(  You can get it from
+# rpm packages or perhaps download it somewhere.  When you are at it,
+# also get 'Source Code Pro'.
+
+
+# default Styles:
+# make sure these fonts exist on your system:
+Style *           Font "xft:Source Sans Pro:pixelsize=14:style=Regular"
+
+Style *           IconFont "xft:Source Sans Pro:pixelsize=10:style=Regular"
+
+Style *           TitleAtLeft
+TitleStyle        LeftJustified
+#TitleStyle      MultiPixmap Main TiledPixmap test-title.xpm
+
+Style * Colorset                $[cswindowinactive], \
+        BorderColorset          $[cswindowinactive], \
+        HilightColorset         $[cswindowactive], \
+        HilightBorderColorset   $[cswindowactive]
+
+
+#Style *           Icon unknown1.xpm, Color lightgrey/dimgrey
+Style *           MWMFunctions, MWMDecor, HintOverride
+Style *           DecorateTransient, NoPPosition
+
+Style *           FocusFollowsMouse
+Style *           MinOverlapPercentPlacement
+#Style *         PositionPlacement UnderMouse
+Style *           EWMHUseStackingOrderHints
+Style *           SnapAttraction 16 All ScreenAll
+
+Style * !Title, BorderWidth 2
+
+# Styles for various Fvwm modules:
+Style Fvwm*       NoTitle,  Sticky, WindowListSkip
+Style Fvwm*       BorderWidth 2, CirculateSkipIcon, CirculateSkip
+Style FvwmPager   !Borders
+
+
+# Styles for various programs:
+#
+# use window classes here, obtained through FvwmIdentify
+#
+
+Style Nemo              OnTop
+Style xcalc             FixedSize
+
+
+# make seamonkey survive fvwm restarts gracefully
+#
+# Seamonkey apparently remembers the (relative) positions of its
+# windows and may move them off screen *and* off desk where they are
+# not recoverable, depending on on which desk the main window comes
+# up.  This option prevents this.
+#
+Style SeaMonkey         FixedPPosition
+
+
+#Style XClock            !Title, !Borders, Sticky, FixedSize
+#Style XOsview           !Title, !Borders, Sticky, FixedSize
+Style XFontSel          FixedSize
+#Style Conky             !Title, !Borders, Sticky, PositionPlacement -0 +0
+#Style Vlc               !Borders
+Style bwstat            Sticky
+#Style XTerm		!Borders
+Style Emacs		!Borders
+Style Vncviewer		!Borders
+Style Xmessage          Sticky, OnTop
+
+
+#Style *lock       NoTitle, NoHandles, Sticky, WindowListSkip, ClickToFocus
+#Style xbiff        !Borders, NoTitle, Sticky, WindowListSkip, ClickToFocus
+#Style xmh         Icon mail1.xpm, NoIconTitle,StickyIcon
+#Style xmh         NoButton 2
+#Style xman        Icon xman.xpm, ClickToFocus
+#Style xgraph      Icon graphs.xpm, ClickToFocus
+#Style xmosaic     Color Green/Yellow, ClickToFocus
+#Style OpenOffice* NoFuncHint

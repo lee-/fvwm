@@ -1,0 +1,32 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+
+# taken from http://fvwm.org/documentation/faq/#toc_7.17
+#
+
+# The autohiding functions
+DestroyFunc autohide
+# AddToFunc autohide
+# + I ThisWindow ($0) Deschedule $[w.id]
+# + I ThisWindow ($0) KeepRc ThisWindow (shaded) WindowShade off
+# + I TestRc (!Match) All ($0, !shaded) autohide_hide $1 $2
+
+DestroyFunc autohide_hide
+# AddToFunc autohide_hide
+# + I Schedule $0 $[w.id] WindowShade $1
+# + I Schedule $0 $[w.id] Deschedule $[w.id]
+
+# Start FvwmAuto
+# AddToFunc StartFunction
+# + I Module FvwmAuto 1 -menter enter_handler
+
+# Add the windows you want to autohide
+DestroyFunc enter_handler
+# AddToFunc enter_handler
+# + I autohide Nemo        3000 S
+# + I autohide qpdfview    3000 S
+#            ^           ^    ^
+#            |           |    |___  Shade direction (optional)
+#            |           |_______  Hide delay (milliseconds)
+#            |___________________  Unique window name/resource

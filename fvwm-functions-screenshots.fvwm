@@ -1,0 +1,33 @@
+
+# screenshot functions for fvwm
+
+
+# Screenshot - using import from ImageMagick
+# taken from fvwm-crystal
+
+# import:
+# The default is quality is 75, which means nearly the best
+# compression with adaptive filtering. The quality setting has no
+# effect on the appearance of PNG and MNG images, since the
+# compression is always lossless.
+
+DestroyFunc Screenshot
+AddToFunc Screenshot
++ I Exec exec mkdir -p $HOME/fvwm/screenshots
++ I Exec exec import -window root $HOME/fvwm/screenshots/screenshot-`date +%Y%m%d_%H%M%S%N`.png
+
+
+DestroyFunc Screenshot-Delay
+AddToFunc Screenshot-Delay
++ I Exec exec mkdir -p $HOME/fvwm/screenshots
++ I Exec exec import -pause 10 -window root $HOME/fvwm/screenshots/screenshot-`date +%Y%m%d_%H%M%S%N`.png
+
+DestroyFunc Screenshot-Frame
+AddToFunc Screenshot-Frame
++ I Exec exec mkdir -p $HOME/fvwm/screenshots
++ I Exec exec import -frame -quality 100 $HOME/fvwm/screenshots/screenshot-`date +%Y%m%d_%H%M%S%N`.png
+
+DestroyFunc FN-Screenshot-DumpWindow
+AddToFunc FN-Screenshot-DumpWindow
++ I Exec exec mkdir -p $HOME/fvwm/screenshots
++ I Exec exec xwd -id $[w.id] -frame -screen -out $HOME/fvwm/screenshots/screenshot-`date +%Y%m%d_%H%M%S%N`.xwd

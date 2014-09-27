@@ -1,0 +1,20 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+
+Style FvwmIconMan       !Borders, Sticky, ClickToFocus
+
+
+SetEnv IconMan_ID_default       "1"
+
+*FvwmIconMan: NumManagers 1 
+
+*FvwmIconMan: $[IconMan_ID_default] Colorset            $[IconMan]
+*FvwmIconMan: $[IconMan_ID_default] DrawIcons           always
+*FvwmIconMan: $[IconMan_ID_default] Font "xft:Inconsolata:pixelsize=14:Medium"
+*FvwmIconMan: $[IconMan_ID_default] PlainButton         flat
+
+*FvwmIconMan: $[IconMan_ID_default] FollowFocus         true
+*FvwmIconMan: $[IconMan_ID_default] Resolution          global
+
+*FvwmIconMan: $[IconMan_ID_default] Action Mouse 2 N sendcommand FuncToggleLayer

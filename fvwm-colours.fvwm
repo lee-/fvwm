@@ -1,0 +1,29 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+
+# Colorset setup
+
+# What colorset numbers do we use?
+SetEnv cswindowinactive "9"
+SetEnv cswindowactive "10"
+SetEnv IconMan "11"
+
+SetEnv csbasecolor "gray6"
+
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Colorsets
+
+Colorset $[cswindowinactive] \
+Foreground DarkBlue, Background $[csbasecolor], \
+DGradient 64 DarkBlue $[csbasecolor]
+
+Colorset $[IconMan] \
+Foreground DarkGreen, Background $[csbasecolor]
+
+Colorset $[cswindowactive] \
+Foreground $[csbasecolor], \
+Background DarkSlateGray, \
+DGradient 64 LightSlateGray DarkSlateGray
+
+ColormapFocus FollowsMouse

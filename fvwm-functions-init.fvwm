@@ -1,0 +1,23 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+# fvwm init functions
+
+
+AddToFunc StartFunction
+#+ I Module FvwmCommandS
+#+ I Module FvwmAnimate
+#+ I Module FvwmBanner
+#+ I Module FvwmButtons
++ I Module FvwmPager
+#+I Module  FvwmIconMan
+#+ I Module FvwmIconBox
+
+
+AddToFunc InitFunction
++ I exec xsetroot -solid $[csbasecolor]
+
+
+# For some SM-s (like gnome-session) there is an internal background setter.
+#AddToFunc SessionInitFunction
+#+ I Nop

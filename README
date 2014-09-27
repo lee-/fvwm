@@ -1,0 +1,35 @@
+
+
+This is my configuration for fvwm.  It straightforwardly does what I
+want/need, with no fancy stuff.  I'm providing it as an example for
+people to get started creating their own configuration.
+
+Before using it, go through the individual files and check for things
+you may need to change.  In particular, you probably want to change
+some key-/mouse bindings and perhaps some fonts.  I've put comments
+into the files to make these places easier to find.
+
+You probably want to modify 'fvwm-menudefs.fvwm' to insert the
+programs you frequently use.
+
+If you use emacs, there is an fvwm-mode available somewhere which
+helps a great deal with editing these files.  You may also want to use
+multisearch from [1].
+
+
+[1]: https://github.com/lee-/emacs
+
+
+This program is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see
+<http://www.gnu.org/licenses/>.

@@ -1,0 +1,36 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+
+# Fonts: 'Source Sans Pro' is not in Debian :(  You can get it from
+# rpm packages or perhaps download it somewhere.  When you are at it,
+# also get 'Source Code Pro'.
+#
+# Blue: I have no idea why the windows on the pager are labled in
+# blue.  I'd sure like to change that.
+
+
+DestroyModuleConfig FvwmPager: *
+*FvwmPager: Back $[csbasecolor]
+*FvwmPager: Fore green
+*FvwmPager: Hilight gray10
+*FvwmPager: Geometry 400x224-16-16
+
+
+# You can have several sets of virtual desktops.  I couldn't figure
+# out how to switch between them ...
+#
+*FvwmPager: Label 0 Misc
+#*FvwmPager: Label 1 Maker
+#*FvwmPager: Label 2 Mail
+#*FvwmPager: Label 3 Matlab
+
+
+*FvwmPager: SmallFont "xft:xft:Source Sans Pro:pixelsize=8:style=Regular""
+*FvwmPager: Balloons            All
+*FvwmPager: BalloonBack         Black
+*FvwmPager: BalloonFore         Green
+*FvwmPager: BalloonFont         "xft:Source Sans Pro:pixelsize=10:style=Regular""
+*FvwmPager: BalloonYOffset      +2
+*FvwmPager: BalloonBorderWidth  1
+*FvwmPager: BalloonBorderColor  Green

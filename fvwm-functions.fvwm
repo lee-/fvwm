@@ -1,0 +1,59 @@
+# multisearch-with-dir: "."
+# multisearch-with-files-matching: "[^\(~\#\)]$"
+
+# some functions for fvwm
+
+
+DestroyFunc FuncFvwmMoveOrRaise
+AddToFunc FuncFvwmMoveOrRaise
++ I Raise
++ M Move
++ D Lower
+
+DestroyFunc FuncFvwmMaximize
+AddToFunc FuncFvwmMaximize
++ M Maximize   0 100
++ H Maximize   0 100
++ C Maximize   0  80
++ D Maximize 100 100
+
+DestroyFunc FuncFvwmMoveOrIconify
+AddToFunc FuncFvwmMoveOrIconify
++ I Raise
++ M Move
++ D Iconify
+
+DestroyFunc FuncFvwmResizeOrRaise
+AddToFunc FuncFvwmResizeOrRaise
++ I Raise
++ M Resize
++ D Lower
+
+# see: MenuFvwmWindowOps2
+# I never used these:
+#
+# DestroyFunc FuncFvwmPrint
+# AddToFunc FuncFvwmPrint
+# + I Raise
+# + I Exec xdpr -id $w
+
+# DestroyFunc FuncFvwmPrintReverse
+# AddToFunc FuncFvwmPrintReverse
+# + I Raise
+# + I Exec xdpr 1/2 -h -rv -id $w
+
+DestroyFunc FuncFvwmFocusPolicyChange
+AddToFunc FuncFvwmFocusPolicyChange
++ I Style * $0
+
+DestroyFunc FuncToggleLayer
+AddToFunc   FuncToggleLayer
++ I ThisWindow (Layer 6) Layer
++ I TestRc (NoMatch) Layer 0 6
+
+
+# Configure and start using an iconbox on the fly
+DestroyFunc FuncFvwmConfigureIconBox
+AddToFunc FuncFvwmConfigureIconBox
++ I Module FvwmIconBox
++ I Style     *  NoIcon
