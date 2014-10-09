@@ -27,3 +27,4 @@ Read fvwm-mousebindings.fvwm
 Read fvwm-nonpublic.fvwm quiet
 Read fvwm-pager.fvwm
 Read fvwm-styles.fvwm
+Read /etc/X11/fvwm/menudefs.hook quiet

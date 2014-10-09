@@ -30,7 +30,7 @@ AddToMenu    MenuArrangeWindows
 + "H-Tile 3"                                    FvwmRearrange -tile -h -a -mn 3 -noraise 0 0 100 100
 + "H-Tile 4"                                    FvwmRearrange -tile -h -a -mn 4 -noraise 0 0 100 100
 + ""
-+ "X-Tile 4"                                    FvwmRearrange -tile -a -mn 2 -h -mn 2 -noraise 0 0 100 100
++ "&X-Tile 4"                                   FvwmRearrange -tile -a -mn 2 -h -mn 2 -noraise 0 0 100 100
 + ""                                            Nop
 + "Cascade"                                     FvwmRearrange -cascade -a
 + ""                                            Nop

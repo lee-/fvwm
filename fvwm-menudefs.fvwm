@@ -98,3 +98,5 @@ AddToMenu misc-menu
 + ""				Nop
 + "gnome-control-center"	StartGnome-control-center
 + "UPS Info"                    StartGapcmon
+Test (f /etc/X11/fvwm/menudefs.hook) + "" Nop
+Test (f /etc/X11/fvwm/menudefs.hook) + "Debian Menu" Popup "/Debian"
