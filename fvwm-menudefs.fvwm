@@ -26,6 +26,8 @@ AddToMenu MenuFvwmRoot
 + "Arrange Windows"                             Popup MenuArrangeWindows
 + ""		                                Nop
 + "xterm"                                       StartXterm
++ "gulltop"                                     StartConnectGulltop
++ "terminology"                                 StartTerminology
 + "urxvt"                                       Exec exec urxvt
 + "Emacs Frame"                                 StartEmacsclient
 + ""		                                Nop
@@ -45,6 +47,8 @@ AddToMenu apps-menu
 + "Remote Seamonkey"            StartSeamonkeyRemote
 + "Local Seamonkey"             StartSeamonkeyLocal
 + Firefox			StartFirefox
++ ""                            Nop
++ "Remote Libreoffice"          StartLibreofficeRemote
 + ""                            Nop
 + Scribus                       StartScribus
 + Lyx                           StartLyx
@@ -84,8 +88,9 @@ AddToMenu misc-menu
 + "Misc Menu"                   Title
 #+ "rox"                         Exec exec rox
 #+ xfe                           Exec exec xfe
++ "nautilus remote"             StartNautilusRemote
 + "nemo"                        StartNemo
-+ "Thunar"                      Exec exec thunar
+#+ "Thunar"                      Exec exec thunar
 #+ 4Pane                         Exec exec 4Pane
 + "qpdfview"                    Exec exec qpdfview
 + "xpdf"                        Exec exec xpdf

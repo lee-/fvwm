@@ -29,6 +29,11 @@ AddToFunc StartGnome-control-center
 + I Exec exec gnome-control-center
 
 
+DestroyFunc StartConnectGulltop
+AddToFunc StartConnectGulltop
++ I Exec exec xterm -maximized -e ssh -t gulltop tmux attach
+
+
 DestroyFunc StartSeamonkeyLocal
 AddToFunc StartSeamonkeyLocal
 + I Exec exec nice -n 19 seamonkey
@@ -36,6 +41,16 @@ AddToFunc StartSeamonkeyLocal
 DestroyFunc StartSeamonkeyRemote
 AddToFunc StartSeamonkeyRemote
 + I Exec exec ~/bin/seamonkey-remote.sh
+
+
+DestroyFunc StartLibreofficeRemote
+AddToFunc StartLibreofficeRemote
++ I Exec exec ~/bin/libreoffice-remote.sh
+
+
+DestroyFunc StartNautilusRemote
+AddToFunc StartNautilusRemote
++ I Exec exec ~/bin/nautilus-remote.sh
 
 
 DestroyFunc StartGimpRemote
@@ -71,6 +86,11 @@ AddToFunc StartEmacsclient
 DestroyFunc StartXterm
 AddToFunc StartXterm
 + I Exec exec xterm
+
+
+DestroyFunc StartTerminology
+AddToFunc StartTerminology
++ I Exec exec terminology
 
 
 DestroyFunc StartGapcmon

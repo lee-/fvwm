@@ -66,7 +66,7 @@ Style XFontSel          FixedSize
 #Style Conky             !Title, !Borders, Sticky, PositionPlacement -0 +0
 #Style Vlc               !Borders
 Style bwstat            Sticky
-#Style XTerm		!Borders
+Style XTerm		!Borders
 Style Emacs		!Borders
 Style Vncviewer		!Borders
 Style Xmessage          Sticky, OnTop
