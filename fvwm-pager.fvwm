@@ -12,9 +12,12 @@
 
 DestroyModuleConfig FvwmPager: *
 *FvwmPager: Back $[csbasecolor]
-*FvwmPager: Fore green
-*FvwmPager: Hilight gray10
-*FvwmPager: Geometry 400x224-16-16
+*FvwmPager: Fore darkgreen
+*FvwmPager: Hilight gray5
+*FvwmPager: WindowColors darkgreen gray5 goldenrod gray10
+*FvwmPager: Geometry 800x448-16-16
+*FvwmPager: MiniIcons
+*FvwmPager: SolidSeparators
 
 
 # You can have several sets of virtual desktops.  I couldn't figure
@@ -26,11 +29,11 @@ DestroyModuleConfig FvwmPager: *
 #*FvwmPager: Label 3 Matlab
 
 
-*FvwmPager: SmallFont "xft:xft:Source Sans Pro:pixelsize=8:style=Regular""
+*FvwmPager: SmallFont "xft:xft:Source Sans Pro:pixelsize=12:style=Regular""
 *FvwmPager: Balloons            All
 *FvwmPager: BalloonBack         Black
 *FvwmPager: BalloonFore         Green
-*FvwmPager: BalloonFont         "xft:Source Sans Pro:pixelsize=10:style=Regular""
+*FvwmPager: BalloonFont         "xft:Source Sans Pro:pixelsize=12:style=Regular""
 *FvwmPager: BalloonYOffset      +2
 *FvwmPager: BalloonBorderWidth  1
 *FvwmPager: BalloonBorderColor  Green
