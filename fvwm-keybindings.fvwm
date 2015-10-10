@@ -33,34 +33,53 @@ IgnoreModifiers 2
 # | mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
 # `----
 #
-#Key Next         A       SCM     Next [*] Focus
-#Key Prior        A       SCM     Prev [*] Focus
-# Screenshot
-Key Print               A       A       Screenshot
-Key Scroll_Lock         A       5       WindowList
-# Key Pause               A       A       Exec exec espeak -p 15 -v de -m "<speak xml version="1.0"><prosody rate="slow">Es ist <emphasis>$(date +%H)</emphasis> Uhr <emphasis>$(date +%M)</emphasis>.</prosody></speak>"
-Key F12                 W       5       Maximize
-Key Tab                 A       M       -
-Key Tab                 W       1       RaiseLower
-Key Tab                 A       5       WindowList
 
-Key F1                  A       5       Menu MenuFvwmRoot
-Key F10                 W       5       Menu MenuScreenshot
-Key F11                 W       5       Iconify
-Key F2			R	5	Function StartClient
+
+
+
+
+
+#
 # Key F3			R	5	Function StartEmacs
 # Key F4			R	5	Function StartVlc
 # Key F5			R	5	Function StartEmacsclient
 # Key F6			R	5	Function StartSeamonkey
-# Key F7			R	5	Function StartXterm
-
-Key End                 W       5       Menu MenuArrangeWindows
-Key Home                W       5       Resize
-
-
+# Key Tab                 A       1       WindowList
+# Screenshot
 # this is the desktop switching:
-#
-Key Right               A       5       GotoPage 1p 0p
-Key Left                A       5       GotoPage -1p 0p
-Key Down                A       5       GotoPage 0p 1p
-Key Up                  A       5       GotoPage 0p -1p
+#Key F12                 A       A       WindowList
+#Key F3			R	4	Function StartOolite
+#Key Next         A       SCM     Next [*] Focus
+#Key Pause               A       A       Exec exec espeak -p 15 -v de -m "<speak xml version="1.0"><prosody rate="slow">Es ist <emphasis>$(date +%H)</emphasis> Uhr <emphasis>$(date +%M)</emphasis>.</prosody></speak>"
+#Key Prior        A       SCM     Prev [*] Focus
+#Key Tab                 A       M       -
+
+Key Down                A       1       GotoPage 0p 1p
+Key Left                A       1       GotoPage -1p 0p
+Key Right               A       1       GotoPage 1p 0p
+Key Up                  A       1       GotoPage 0p -1p
+
+Key Home                W       1       Resize
+Key F10                 W       4       Function ToggleDecor
+Key F10                 W       1       Menu MenuScreenshot
+Key F11                 W       1       Iconify
+Key F12                 W       1       Resize frame 100 100
+Key F1                  A       CS      Function WarpToTerminal
+Key F2			A	1	Function StartClient
+Key F2			A	CS	Function WarpToMy
+Key F3                  A       1       Function StartEmacs
+Key F3                  A       CS      Function WarpToEmacs
+Key F4                  A       CS      Function WarpToBrowser
+Key F4                  A       1       Function StartSeamonkeyLocal
+Key F5                  A       1       Function StartFilemanager
+Key F5			A	CS	Function WarpToFilemanager
+Key F6			A	CS	Function WarpToMplayer
+
+
+Key Menu                W       A       Menu MenuArrangeWindows
+Key Menu                R       A       Menu MenuFvwmRoot
+Key Print               A       A       Screenshot
+
+Key Scroll_Lock         A       A       WindowList
+Key Tab                 A       4       WindowList
+Key Tab                 W       1       RaiseLower

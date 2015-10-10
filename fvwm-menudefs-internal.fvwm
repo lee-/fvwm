@@ -16,13 +16,15 @@ AddToMenu MenuScreenshot
 DestroyMenu  MenuArrangeWindows
 AddToMenu    MenuArrangeWindows
 + "Arrange Windows"                             Title
-+ ""                                            Nop
 # + "This Suspend"                                Function SuspendProcess
++ "Toggle &Decor"                               Function ToggleDecor
 + ""                                            Nop
-+ "This Maximize"                               Maximize   0 100
-+ "This Quarter"                                Maximize True 50 50
++ "This &Maximize"                              Resize frame 100 100
++ "This &Half"                                  Function HalfReplace
++ "This &Quarter"                               Function QuarterReplace
++ "This &Grow"                                  Function GrowReplace
 + ""                                            Nop
-+ "V-Tile 2"                                    FvwmRearrange -tile -a -mn 2 -noraise 0 0 100 100
++ "&V-Tile 2"                                   FvwmRearrange -tile -a -mn 2 -noraise 0 0 100 100
 + "V-Tile 3"                                    FvwmRearrange -tile -a -mn 3 -noraise 0 0 100 100
 + "V-Tile 4"                                    FvwmRearrange -tile -a -mn 4 -noraise 0 0 100 100
 + ""                                            Nop
@@ -34,14 +36,14 @@ AddToMenu    MenuArrangeWindows
 + ""                                            Nop
 + "Cascade"                                     FvwmRearrange -cascade -a
 + ""                                            Nop
-+ "This Iconify"                                Iconify
-+ "This OnTop"                                  FuncToggleLayer
-+ "This Sticky"                                 Stick
++ "This &Iconify"                               Iconify
++ "This &OnTop"                                 FuncToggleLayer
++ "This &Sticky"                                Stick
 + ""                                            Nop
 + "Window Options 1"                            Popup MenuFvwmWindowOps
 + "Window Options 2"                            Popup MenuFvwmWindowOps2
 + ""                                            Nop
-+ "This Identify"                               Module FvwmIdent
++ "This Identif&y"                              Module FvwmIdent
 
 
 DestroyMenu MenuFvwmConfig

@@ -57,3 +57,79 @@ DestroyFunc FuncFvwmConfigureIconBox
 AddToFunc FuncFvwmConfigureIconBox
 + I Module FvwmIconBox
 + I Style     *  NoIcon
+
+
+# put mouse pointer into the center of the window selected from the
+# windowlist instead of at the edge
+DestroyFunc WindowListFunc
+AddToFunc WindowListFunc
+          + I Iconify off
+          + I FlipFocus
+          + I Raise
+          + I WarpToWindow 50 50
+
+
+# switch to windows by keybindings
+#
+# These warping functions allow you to switch to the windows of
+# particular programs.  They make it unnecessary to remember which
+# program is on which page and how to get to that page from the page
+# you are at.
+#
+# One feature I wish for is the ability to switch forth and back to
+# particular windows, like switching between a particular xterm and a
+# particular emacs frame: When you have multiple xterms or emacs
+# frames, warping to one cycles through all of them.  I would find it
+# more useful to be able to switch between the two (or more) windows
+# I'm currently working with, without having to go through the ones
+# I'm /not/ currently working with.
+#
+# Please let me know if you can figure out how to do this.
+#
+DestroyFunc WarpToTerminal
+AddToFunc WarpToTerminal
+        + I Next ("XTerm")               WarpToWindow 50 50
+
+DestroyFunc WarpToEmacs
+AddToFunc WarpToEmacs
+        + I Next ("Emacs")              WarpToWindow 50 50
+
+DestroyFunc WarpToBrowser
+AddToFunc WarpToBrowser
+        + I Next ("Seamonkey")          WarpToWindow 50 50
+
+DestroyFunc WarpToFilemanager
+AddToFunc WarpToFilemanager
+        + I Next ("Xfe")                WarpToWindow 50 50
+
+DestroyFunc WarpToMplayer
+AddToFunc WarpToMplayer
+        + I Next ("MPlayer")            WarpToWindow 50 50
+
+
+# toggle decor function 
+# http://www.calmar.ws/fvwm/bindings.html
+#
+DestroyFunc ToggleDecor
+AddToFunc ToggleDecor
++ I State 1 toggle
++ I Current (State 1) WindowStyle !Borders, NoTitle
++ I TestRc (NoMatch) WindowStyle Borders, Title
+
+#
+# FIXME: These should be toggles.
+#
+DestroyFunc QuarterReplace
+AddToFunc QuarterReplace
++ I Resize frame 50 50
++ I PlaceAgain
+
+DestroyFunc HalfReplace
+AddToFunc HalfReplace
++ I Resize frame 50 100
++ I PlaceAgain
+
+DestroyFunc GrowReplace
+AddToFunc GrowReplace
++ I Resize frame keep 100
++ I Move w0 0

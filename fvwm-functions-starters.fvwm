@@ -19,43 +19,18 @@ AddToFunc StartDarktable
 + I Exec exec darktable
 
 
-DestroyFunc StartNemo
-AddToFunc StartNemo
-+ I Exec exec nemo --no-desktop
-
-
-DestroyFunc StartGnome-control-center
-AddToFunc StartGnome-control-center
-+ I Exec exec gnome-control-center
-
-
-DestroyFunc StartConnectGulltop
-AddToFunc StartConnectGulltop
-+ I Exec exec xterm -maximized -e ssh -t gulltop tmux attach
-
+DestroyFunc StartMc
+AddToFunc StartMc
++ I Exec exec xterm -maximized -e mc
 
 DestroyFunc StartSeamonkeyLocal
 AddToFunc StartSeamonkeyLocal
 + I Exec exec nice -n 19 seamonkey
 
-DestroyFunc StartSeamonkeyRemote
-AddToFunc StartSeamonkeyRemote
-+ I Exec exec ~/bin/seamonkey-remote.sh
 
-
-DestroyFunc StartLibreofficeRemote
-AddToFunc StartLibreofficeRemote
-+ I Exec exec ~/bin/libreoffice-remote.sh
-
-
-DestroyFunc StartNautilusRemote
-AddToFunc StartNautilusRemote
-+ I Exec exec ~/bin/nautilus-remote.sh
-
-
-DestroyFunc StartGimpRemote
-AddToFunc StartGimpRemote
-+ I Exec exec ~/bin/gimp-remote.sh
+DestroyFunc StartFilemanager
+AddToFunc StartFilemanager
++ I Exec exec xfe
 
 
 DestroyFunc StartFirefox
@@ -85,14 +60,33 @@ AddToFunc StartEmacsclient
 
 DestroyFunc StartXterm
 AddToFunc StartXterm
-+ I Exec exec xterm
-
-
-DestroyFunc StartTerminology
-AddToFunc StartTerminology
-+ I Exec exec terminology
++ I Exec exec xterm -maximized
 
 
 DestroyFunc StartGapcmon
 AddToFunc StartGapcmon
 + I Exec exec gapcmon
+
+
+DestroyFunc StartBlender
+AddToFunc StartBlender
++ I Exec exec blender
+
+
+DestroyFunc StartAvidemux
+AddToFunc StartAvidemux
++ I Exec exec avidemux3_qt4
+
+
+DestroyFunc StartOolite
+AddToFunc StartOolite
++ I Exec exec ~/bin/oolite.sh
+
+DestroyFunc StartUfo
+AddToFunc StartUfo
++ I Exec exec /usr/bin/ufo
+
+
+DestroyFunc StartLO
+AddToFunc StartLO
++ I Exec exec libreoffice

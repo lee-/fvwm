@@ -26,12 +26,10 @@ AddToMenu MenuFvwmRoot
 + "Arrange Windows"                             Popup MenuArrangeWindows
 + ""		                                Nop
 + "xterm"                                       StartXterm
-+ "gulltop"                                     StartConnectGulltop
-+ "terminology"                                 StartTerminology
-+ "urxvt"                                       Exec exec urxvt
 + "Emacs Frame"                                 StartEmacsclient
 + ""		                                Nop
 + "Calculators"	                                Popup calculators-menu
++ "Games"                                       Popup Mgames
 + "Graphics"	                                Popup graphics-menu
 + "Misc"		                        Popup misc-menu
 + "Apps"		                        Popup apps-menu
@@ -39,16 +37,22 @@ AddToMenu MenuFvwmRoot
 + "Fvwm Menu"                                   Popup my-fvwm-menu
 
 
+DestroyMenu Mgames
+AddToMenu Mgames
++ "Games Menu"                  Title
++ "oolite"                      StartOolite
++ "ufo"                         StartUfo
+
+
 DestroyMenu apps-menu
 AddToMenu apps-menu
 + "Apps Menu"                   Title
 + emacs         		StartEmacs
 + ""                            Nop
-+ "Remote Seamonkey"            StartSeamonkeyRemote
-+ "Local Seamonkey"             StartSeamonkeyLocal
++ "Seamonkey"                   StartSeamonkeyLocal
 + Firefox			StartFirefox
 + ""                            Nop
-+ "Remote Libreoffice"          StartLibreofficeRemote
++ "Libreoffice"                 StartLO
 + ""                            Nop
 + Scribus                       StartScribus
 + Lyx                           StartLyx
@@ -63,11 +67,13 @@ AddToMenu calculators-menu
 DestroyMenu graphics-menu
 AddToMenu graphics-menu
 + "Graphics Menu"               Title
-+ gimp-remote                   StartGimpRemote
 + gimp                          Exec exec gimp
++ blender                       StartBlender
 + darktable			StartDarktable
 + ""                            Nop
-+ dvbcut                        Exec exec dvbcut
++ avidemux                      StartAvidemux
++ cinelerra                     Exec exec cinelerra
++ openshot                      Exec exec openshot
 + vlc                           StartVlc
 + ""                            Nop
 + xfig                          Exec exec xfig
@@ -87,21 +93,18 @@ DestroyMenu misc-menu
 AddToMenu misc-menu
 + "Misc Menu"                   Title
 #+ "rox"                         Exec exec rox
-#+ xfe                           Exec exec xfe
-+ "nautilus remote"             StartNautilusRemote
-+ "nemo"                        StartNemo
++ xfe                           StartFilemanager
++ "mc"                          StartMc
 #+ "Thunar"                      Exec exec thunar
 #+ 4Pane                         Exec exec 4Pane
-+ "qpdfview"                    Exec exec qpdfview
-+ "xpdf"                        Exec exec xpdf
+#+ "qpdfview"                    Exec exec qpdfview
 + ""		                Nop
 + "Mumble"                      Exec exec mumble
 + "Filezilla"                   Exec exec filezilla
 + ""		                Nop
 + "xosview"                     Exec exec xosview -geometry 240x965-0-235
-+ "xbiff"                       Exec exec "xbiff -fg darkgreen -bg black -update 120"
 + ""				Nop
-+ "gnome-control-center"	StartGnome-control-center
+#+ "gnome-control-center"	StartGnome-control-center
 + "UPS Info"                    StartGapcmon
 Test (f /etc/X11/fvwm/menudefs.hook) + "" Nop
 Test (f /etc/X11/fvwm/menudefs.hook) + "Debian Menu" Popup "/Debian"

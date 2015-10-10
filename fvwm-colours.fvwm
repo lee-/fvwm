@@ -15,7 +15,7 @@ SetEnv csbasecolor "gray6"
 # Colorsets
 
 Colorset $[cswindowinactive] \
-Foreground DarkBlue, Background $[csbasecolor], \
+Foreground DarkGreen, Background $[csbasecolor], \
 DGradient 64 DarkBlue $[csbasecolor]
 
 Colorset $[IconMan] \

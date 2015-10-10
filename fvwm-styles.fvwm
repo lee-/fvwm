@@ -10,11 +10,12 @@
 # default Styles:
 # make sure these fonts exist on your system:
 Style *           Font "xft:Source Sans Pro:pixelsize=14:style=Regular"
-
 Style *           IconFont "xft:Source Sans Pro:pixelsize=10:style=Regular"
 
 Style *           TitleAtLeft
-TitleStyle        LeftJustified
+#TitleStyle        LeftJustified
+TitleStyle        RightJustified
+#TitleStyle        Centered
 #TitleStyle      MultiPixmap Main TiledPixmap test-title.xpm
 
 Style * Colorset                $[cswindowinactive], \
@@ -23,21 +24,25 @@ Style * Colorset                $[cswindowinactive], \
         HilightBorderColorset   $[cswindowactive]
 
 
-#Style *           Icon unknown1.xpm, Color lightgrey/dimgrey
-Style *           MWMFunctions, MWMDecor, HintOverride
-Style *           DecorateTransient, NoPPosition
-
-Style *           FocusFollowsMouse
 Style *           MinOverlapPercentPlacement
-#Style *         PositionPlacement UnderMouse
+Style *           DecorateTransient
+Style *           NoUsePPosition
+Style *           NoUseTransientPPosition
+Style *           FocusFollowsMouse
 Style *           EWMHUseStackingOrderHints
 Style *           SnapAttraction 16 All ScreenAll
+Style *           StickyIcon
+Style *           IgnoreRestack
 
-Style * !Title, BorderWidth 2
+#
+# !Handles ? BorderWidth : HandleWidth
+# It doesn't hurt to set both.
+#
+Style *           Title, BorderWidth 8, HandleWidth 8
 
 # Styles for various Fvwm modules:
-Style Fvwm*       NoTitle,  Sticky, WindowListSkip
-Style Fvwm*       BorderWidth 2, CirculateSkipIcon, CirculateSkip
+Style Fvwm*       NoTitle,  Sticky
+Style Fvwm*       CirculateSkipIcon, CirculateSkip
 Style FvwmPager   !Borders
 
 
@@ -46,8 +51,8 @@ Style FvwmPager   !Borders
 # use window classes here, obtained through FvwmIdentify
 #
 
-Style Nemo              OnTop
 Style xcalc             FixedSize
+Style MPlayer           Borders, Sticky, OnTop
 
 
 # make seamonkey survive fvwm restarts gracefully
@@ -60,23 +65,6 @@ Style xcalc             FixedSize
 Style SeaMonkey         FixedPPosition
 
 
-#Style XClock            !Title, !Borders, Sticky, FixedSize
-#Style XOsview           !Title, !Borders, Sticky, FixedSize
 Style XFontSel          FixedSize
-#Style Conky             !Title, !Borders, Sticky, PositionPlacement -0 +0
-#Style Vlc               !Borders
-Style bwstat            Sticky
-Style XTerm		!Borders
-Style Emacs		!Borders
-Style Vncviewer		!Borders
+Style bwstat            Sticky, OnTop, !Title, Borders
 Style Xmessage          Sticky, OnTop
-
-
-#Style *lock       NoTitle, NoHandles, Sticky, WindowListSkip, ClickToFocus
-#Style xbiff        !Borders, NoTitle, Sticky, WindowListSkip, ClickToFocus
-#Style xmh         Icon mail1.xpm, NoIconTitle,StickyIcon
-#Style xmh         NoButton 2
-#Style xman        Icon xman.xpm, ClickToFocus
-#Style xgraph      Icon graphs.xpm, ClickToFocus
-#Style xmosaic     Color Green/Yellow, ClickToFocus
-#Style OpenOffice* NoFuncHint
