@@ -1,4 +1,17 @@
 
+
+This repo has moved: git clone git://dawn.adminart.net/fvwm.git
+
+
+
+
+
+
+
+
+
+
+
 This is my configuration for fvwm.  It straightforwardly does what I
 want/need, with no fancy stuff I don't need.  I'm providing it as an
 example for people to get started creating their own configuration.
